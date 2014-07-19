@@ -3983,7 +3983,7 @@ form + hr {
 
   /* overflow: hidden; */
   position: relative;
-  width: 165px;
+  width: 180px;
   /* allow a black theme but for the text to still be readable */
   /*text-shadow: -2px 0 10px white, 2px 0 10px white, 0 2px 10px white, 0 -2px 10px white;*/
 }
