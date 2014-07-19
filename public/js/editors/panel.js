@@ -9,6 +9,7 @@ var editorModes = {
   css: 'css',
   typescript: 'javascript',
   markdown: 'markdown',
+  markdowneditor: 'markdown',
   coffeescript: 'coffeescript',
   jsx: 'javascript',
   less: 'text/x-less',

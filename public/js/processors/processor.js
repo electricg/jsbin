@@ -264,6 +264,31 @@ var processors = jsbin.processors = (function () {
       }
     }),
 
+    markdowneditor: createProcessor({
+      id: 'markdown',
+      target: 'html',
+      extensions: ['md', 'markdown', 'mdown'],
+      url: jsbin.static + '/js/vendor/marked.min.js',
+      init: function marked(ready) {
+        $.when(
+          $.getScript(jsbin.static + '/js/vendor/codemirror4/mode/markdown/markdown.js'),
+          $.getScript(jsbin.static + '/js/vendor/markdowneditor/index.js'),
+          $.Deferred(function(deferred){
+            $(deferred.resolve);
+          })
+        ).done(function() {
+          ready();
+        });
+      },
+      handler: function (source, resolve, reject) {
+        try {
+          resolve(window.marked(source));
+        } catch (e) {
+          reject(e);
+        }
+      }
+    }),
+
     processing: createProcessor({
       id: 'processing',
       target: 'javascript',
