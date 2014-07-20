@@ -12,4 +12,5 @@
 
 .toolbar-wrapper {
   top: 39px;
+  z-index: 5;
 }
