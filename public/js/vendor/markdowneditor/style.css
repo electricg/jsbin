@@ -11,6 +11,10 @@
 }*/
 
 .toolbar-wrapper {
+  border-bottom: 1px solid #E6E6E6;
+  border-left: 0 none;
+  border-right: 0 none;
+  border-top-color: #E6E6E6;
   top: 39px;
   z-index: 5;
 }
