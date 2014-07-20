@@ -1,6 +1,6 @@
 /* from https://github.com/sindresorhus/github-markdown-css */
 
-@import 'http://rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css';
+/*@import 'http://rawgit.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css';
 
 .markdown-body {
   min-width: 200px;
@@ -8,4 +8,8 @@
   margin: 0 auto;
   padding: 30px;
   overflow: auto;
+}*/
+
+.toolbar-wrapper {
+  top: 39px;
 }
