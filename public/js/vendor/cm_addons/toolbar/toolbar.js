@@ -109,7 +109,6 @@
       for (var i = 0; i < selections.length; i++) {
         newSelections[i] = left + selections[i] + right;
       }
-      cm.focus();
       cm.replaceSelections(newSelections);
     }
     else {
@@ -117,12 +116,11 @@
         newSelectionsL[i] = left + selections[i];
         newSelectionsR[i] = selections[i] + right;
       }
-      cm.focus();
       cm.replaceSelections(newSelectionsL);
       cm.replaceSelections(newSelectionsR, 'start');
     }
     
-    
+    cm.focus();
   }
 
 
