@@ -9,12 +9,18 @@
   var jsLine = 'document.body.className = "markdown-body";';
   var jsPanel = jsbin.panels.panels.javascript;
   var jsCode = jsPanel.getCode();
+  var htmlLine = '# JS Bin markdown editor';
+  var htmlPanel = jsbin.panels.panels.html;
+  var htmlCode = htmlPanel.getCode();
 
   if (cssCode.indexOf(cssLine) === -1) {
     cssPanel.setCode(cssLine + '\n' + cssCode);
   }
   if (jsCode.indexOf(jsLine) === -1) {
     jsPanel.setCode(jsLine + '\n' + jsCode);
+  }
+  if (htmlCode.indexOf(htmlLine) === -1) {
+    htmlPanel.setCode(htmlLine + '\n' + htmlCode);
   }
   $.when(
     $.getScript(jsbin.static + '/js/vendor/cm_addons/toolbar/toolbar.js'),
@@ -38,8 +44,8 @@
       $(deferred.resolve);
     })
   ).done(function() {
-    jsbin.panels.panels.html.editor.setOption('toolbarOpt', { buttons: buttons_markdown });
-    jsbin.panels.panels.html.editor.setOption('toolbar', true);
+    htmlPanel.editor.setOption('toolbarOpt', { buttons: buttons_markdown });
+    htmlPanel.editor.setOption('toolbar', true);
     $document.trigger('sizeeditors');
   });
 }());
